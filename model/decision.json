@@ -1,0 +1,4 @@
+{
+  "threshold": 0.41801421693603036,
+  "objective": "validation accuracy; ties prefer fewer false positives, then threshold nearest 0.5"
+}

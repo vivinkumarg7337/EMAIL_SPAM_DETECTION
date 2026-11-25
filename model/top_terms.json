@@ -1,0 +1,206 @@
+{
+ "spam": [
+  {
+   "term": "prize",
+   "weight": 0.899727260877169
+  },
+  {
+   "term": "http",
+   "weight": 0.7435450956077142
+  },
+  {
+   "term": "free",
+   "weight": 0.6761274169725932
+  },
+  {
+   "term": "selected",
+   "weight": 0.580599449577956
+  },
+  {
+   "term": "secure",
+   "weight": 0.5663814237905799
+  },
+  {
+   "term": "address",
+   "weight": 0.5531168877160173
+  },
+  {
+   "term": "won",
+   "weight": 0.5531168877160173
+  },
+  {
+   "term": "unpaid",
+   "weight": 0.5370584324400111
+  },
+  {
+   "term": "received",
+   "weight": 0.5370584324400111
+  },
+  {
+   "term": "payment",
+   "weight": 0.5370584324400111
+  },
+  {
+   "term": "invoice",
+   "weight": 0.5370584324400111
+  },
+  {
+   "term": "details",
+   "weight": 0.5235523436901875
+  },
+  {
+   "term": "hours",
+   "weight": 0.5164743947949272
+  },
+  {
+   "term": "claim",
+   "weight": 0.5152742481772843
+  },
+  {
+   "term": "items",
+   "weight": 0.4722859750288834
+  },
+  {
+   "term": "stock",
+   "weight": 0.4722859750288834
+  },
+  {
+   "term": "clearing",
+   "weight": 0.4722859750288834
+  },
+  {
+   "term": "hundreds",
+   "weight": 0.4722859750288834
+  },
+  {
+   "term": "exclusive",
+   "weight": 0.4722859750288834
+  },
+  {
+   "term": "every",
+   "weight": 0.4722859750288834
+  },
+  {
+   "term": "within",
+   "weight": 0.4543245344234754
+  },
+  {
+   "term": "account",
+   "weight": 0.44518015195447797
+  },
+  {
+   "term": "verify",
+   "weight": 0.4393057117799885
+  },
+  {
+   "term": "shipping",
+   "weight": 0.43758804332992707
+  },
+  {
+   "term": "login",
+   "weight": 0.42163853979783983
+  }
+ ],
+ "legitimate": [
+  {
+   "term": "standup",
+   "weight": -0.7148566636305774
+  },
+  {
+   "term": "reply",
+   "weight": -0.6561808801789402
+  },
+  {
+   "term": "next",
+   "weight": -0.6516937118670817
+  },
+  {
+   "term": "anything",
+   "weight": -0.6258668595281494
+  },
+  {
+   "term": "please",
+   "weight": -0.6151622560120644
+  },
+  {
+   "term": "thanks",
+   "weight": -0.5468219942891137
+  },
+  {
+   "term": "regards",
+   "weight": -0.5252923599431634
+  },
+  {
+   "term": "help",
+   "weight": -0.506349823626963
+  },
+  {
+   "term": "looks",
+   "weight": -0.4973977283908563
+  },
+  {
+   "term": "wrong",
+   "weight": -0.4973977283908563
+  },
+  {
+   "term": "message",
+   "weight": -0.47584403772786776
+  },
+  {
+   "term": "review",
+   "weight": -0.426787096441624
+  },
+  {
+   "term": "time",
+   "weight": -0.3990174659788667
+  },
+  {
+   "term": "way",
+   "weight": -0.3611419258248912
+  },
+  {
+   "term": "finished",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "summary",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "blocker",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "notes",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "quick",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "squad",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "pick",
+   "weight": -0.3574283318152887
+  },
+  {
+   "term": "organised",
+   "weight": -0.3484501339069095
+  },
+  {
+   "term": "agenda",
+   "weight": -0.3484501339069095
+  },
+  {
+   "term": "steps",
+   "weight": -0.3484501339069095
+  },
+  {
+   "term": "attendance",
+   "weight": -0.3484501339069095
+  }
+ ]
+}

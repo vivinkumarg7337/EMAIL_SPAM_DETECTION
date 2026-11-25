@@ -1,0 +1,9 @@
+{
+ "kind": "text_sk",
+ "task": "text_classification",
+ "classes": [
+  "0",
+  "1"
+ ],
+ "text_column": "text"
+}

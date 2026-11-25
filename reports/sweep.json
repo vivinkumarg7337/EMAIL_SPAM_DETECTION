@@ -1,0 +1,4386 @@
+{
+ "generated": "20261125-112012",
+ "dataset": {
+  "path": "data/emails.csv",
+  "rows": 2400,
+  "train": 1920,
+  "validation": 240,
+  "test": 240,
+  "note": "Generated stand-in, not the user CSV. Previously revised after test inspection; test scores are exploratory, not independent. Data frozen for this search."
+ },
+ "primary_metric": "validation accuracy, then fewer false positives; threshold selected on validation only",
+ "best": {
+  "run_id": "tuned-20261125-112012-16-e387-n1-c0.1",
+  "config": {
+   "entry": 387,
+   "ngram": 1,
+   "max_features": 20000,
+   "C": 0.1
+  },
+  "threshold": 0.41801421693603036,
+  "validation": {
+   "accuracy": 1.0,
+   "balanced_accuracy": 1.0,
+   "precision_macro": 1.0,
+   "recall_macro": 1.0,
+   "f1_macro": 1.0,
+   "f1_spam": 1.0,
+   "roc_auc": 1.0,
+   "pr_auc": 1.0,
+   "confusion_matrix": [
+    [
+     120,
+     0
+    ],
+    [
+     0,
+     120
+    ]
+   ],
+   "per_class": {
+    "legitimate": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 120
+    },
+    "spam": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 120
+    }
+   }
+  },
+  "test": {
+   "accuracy": 0.95,
+   "balanced_accuracy": 0.95,
+   "precision_macro": 0.9531468531468532,
+   "recall_macro": 0.95,
+   "f1_macro": 0.9499130434782608,
+   "f1_spam": 0.952,
+   "roc_auc": 0.9984027777777778,
+   "pr_auc": 0.9985264013991784,
+   "confusion_matrix": [
+    [
+     109,
+     11
+    ],
+    [
+     1,
+     119
+    ]
+   ],
+   "per_class": {
+    "legitimate": {
+     "precision": 0.990909090909091,
+     "recall": 0.9083333333333333,
+     "f1": 0.9478260869565217,
+     "support": 120
+    },
+    "spam": {
+     "precision": 0.9153846153846154,
+     "recall": 0.9916666666666667,
+     "f1": 0.952,
+     "support": 120
+    }
+   }
+  }
+ },
+ "runs": [
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 0.1
+   },
+   "run_id": "tuned-20261125-112012-01-e386-n1-c0.1",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-01-e386-n1-c0.1",
+   "engine": {
+    "run_id": "tuned-20261125-112012-01-e386-n1-c0.1",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 0.1
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.2,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:14",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.27460200371273513,
+   "train_seconds": 1.2,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 0.5
+   },
+   "run_id": "tuned-20261125-112012-02-e386-n1-c0.5",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-02-e386-n1-c0.5",
+   "engine": {
+    "run_id": "tuned-20261125-112012-02-e386-n1-c0.5",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 0.5
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.15,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:17",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.2585028769418884,
+   "train_seconds": 1.15,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 1.0
+   },
+   "run_id": "tuned-20261125-112012-03-e386-n1-c1.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-03-e386-n1-c1.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-03-e386-n1-c1.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 1.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.16,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:21",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9958333333333333,
+    "balanced_accuracy": 0.9958333333333333,
+    "precision_macro": 0.9958677685950413,
+    "recall_macro": 0.9958333333333333,
+    "f1_macro": 0.9958332609941145,
+    "f1_spam": 0.99581589958159,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      1,
+      119
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9917355371900827,
+      "recall": 1.0,
+      "f1": 0.995850622406639,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.2537843373912939,
+   "train_seconds": 1.16,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 5.0
+   },
+   "run_id": "tuned-20261125-112012-04-e386-n1-c5.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-04-e386-n1-c5.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-04-e386-n1-c5.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 5.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.23,
+    "peak_rss_mb": 18,
+    "created": "2026-11-25 11:20:24",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9958333333333333,
+    "balanced_accuracy": 0.9958333333333333,
+    "precision_macro": 0.9958677685950413,
+    "recall_macro": 0.9958333333333333,
+    "f1_macro": 0.9958332609941145,
+    "f1_spam": 0.99581589958159,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      1,
+      119
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9917355371900827,
+      "recall": 1.0,
+      "f1": 0.995850622406639,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.2447256715688898,
+   "train_seconds": 1.23,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 10.0
+   },
+   "run_id": "tuned-20261125-112012-05-e386-n1-c10.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-05-e386-n1-c10.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-05-e386-n1-c10.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 10.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.29,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:28",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9958333333333333,
+    "balanced_accuracy": 0.9958333333333333,
+    "precision_macro": 0.9958677685950413,
+    "recall_macro": 0.9958333333333333,
+    "f1_macro": 0.9958332609941145,
+    "f1_spam": 0.99581589958159,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      1,
+      119
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9917355371900827,
+      "recall": 1.0,
+      "f1": 0.995850622406639,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.23966073992363884,
+   "train_seconds": 1.29,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 0.1
+   },
+   "run_id": "tuned-20261125-112012-06-e386-n2-c0.1",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-06-e386-n2-c0.1",
+   "engine": {
+    "run_id": "tuned-20261125-112012-06-e386-n2-c0.1",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 0.1
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.38,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:32",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.975,
+    "balanced_accuracy": 0.975,
+    "precision_macro": 0.9761904761904762,
+    "recall_macro": 0.975,
+    "f1_macro": 0.9749843652282677,
+    "f1_spam": 0.9743589743589743,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      6,
+      114
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1": 0.975609756097561,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.95,
+      "f1": 0.9743589743589743,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.241204046937749,
+   "train_seconds": 1.38,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 0.5
+   },
+   "run_id": "tuned-20261125-112012-07-e386-n2-c0.5",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-07-e386-n2-c0.5",
+   "engine": {
+    "run_id": "tuned-20261125-112012-07-e386-n2-c0.5",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 0.5
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.36,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:35",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.25979052517261686,
+   "train_seconds": 1.36,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 1.0
+   },
+   "run_id": "tuned-20261125-112012-08-e386-n2-c1.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-08-e386-n2-c1.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-08-e386-n2-c1.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 1.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.34,
+    "peak_rss_mb": 18,
+    "created": "2026-11-25 11:20:39",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.2530995196085767,
+   "train_seconds": 1.34,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 5.0
+   },
+   "run_id": "tuned-20261125-112012-09-e386-n2-c5.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-09-e386-n2-c5.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-09-e386-n2-c5.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 5.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.41,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:42",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.24565773188614867,
+   "train_seconds": 1.41,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 10.0
+   },
+   "run_id": "tuned-20261125-112012-10-e386-n2-c10.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-10-e386-n2-c10.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-10-e386-n2-c10.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 10.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.49,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:20:46",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.24445397902596394,
+   "train_seconds": 1.49,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 0.1
+   },
+   "run_id": "tuned-20261125-112012-11-e386-n3-c0.1",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-11-e386-n3-c0.1",
+   "engine": {
+    "run_id": "tuned-20261125-112012-11-e386-n3-c0.1",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 0.1
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 3.91,
+    "peak_rss_mb": 184,
+    "created": "2026-11-25 11:20:52",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.975,
+    "balanced_accuracy": 0.975,
+    "precision_macro": 0.9761904761904762,
+    "recall_macro": 0.975,
+    "f1_macro": 0.9749843652282677,
+    "f1_spam": 0.9743589743589743,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      6,
+      114
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1": 0.975609756097561,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.95,
+      "f1": 0.9743589743589743,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.21686961507728603,
+   "train_seconds": 3.91,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 0.5
+   },
+   "run_id": "tuned-20261125-112012-12-e386-n3-c0.5",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-12-e386-n3-c0.5",
+   "engine": {
+    "run_id": "tuned-20261125-112012-12-e386-n3-c0.5",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 0.5
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.42,
+    "peak_rss_mb": 185,
+    "created": "2026-11-25 11:20:57",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.2570112910871005,
+   "train_seconds": 2.42,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 1.0
+   },
+   "run_id": "tuned-20261125-112012-13-e386-n3-c1.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-13-e386-n3-c1.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-13-e386-n3-c1.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 1.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.56,
+    "peak_rss_mb": 185,
+    "created": "2026-11-25 11:21:02",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.25163728300808536,
+   "train_seconds": 2.56,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 5.0
+   },
+   "run_id": "tuned-20261125-112012-14-e386-n3-c5.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-14-e386-n3-c5.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-14-e386-n3-c5.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 5.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.59,
+    "peak_rss_mb": 184,
+    "created": "2026-11-25 11:21:07",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.24046055219454388,
+   "train_seconds": 2.59,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 386,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 10.0
+   },
+   "run_id": "tuned-20261125-112012-15-e386-n3-c10.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-15-e386-n3-c10.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-15-e386-n3-c10.0",
+    "entry": 386,
+    "name": "CountVectorizer + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 10.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.56,
+    "peak_rss_mb": 184,
+    "created": "2026-11-25 11:21:12",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9916666666666667,
+    "balanced_accuracy": 0.9916666666666667,
+    "precision_macro": 0.9918032786885246,
+    "recall_macro": 0.9916666666666667,
+    "f1_macro": 0.9916660879227724,
+    "f1_spam": 0.9915966386554622,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      2,
+      118
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.23915355399513874,
+   "train_seconds": 2.56,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 0.1
+   },
+   "run_id": "tuned-20261125-112012-16-e387-n1-c0.1",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-16-e387-n1-c0.1",
+   "engine": {
+    "run_id": "tuned-20261125-112012-16-e387-n1-c0.1",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 0.1
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.63,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:16",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.41801421693603036,
+   "train_seconds": 1.63,
+   "test": {
+    "accuracy": 0.95,
+    "balanced_accuracy": 0.95,
+    "precision_macro": 0.9531468531468532,
+    "recall_macro": 0.95,
+    "f1_macro": 0.9499130434782608,
+    "f1_spam": 0.952,
+    "roc_auc": 0.9984027777777778,
+    "pr_auc": 0.9985264013991784,
+    "confusion_matrix": [
+     [
+      109,
+      11
+     ],
+     [
+      1,
+      119
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.990909090909091,
+      "recall": 0.9083333333333333,
+      "f1": 0.9478260869565217,
+      "support": 120
+     },
+     "spam": {
+      "precision": 0.9153846153846154,
+      "recall": 0.9916666666666667,
+      "f1": 0.952,
+      "support": 120
+     }
+    }
+   }
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 0.5
+   },
+   "run_id": "tuned-20261125-112012-17-e387-n1-c0.5",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-17-e387-n1-c0.5",
+   "engine": {
+    "run_id": "tuned-20261125-112012-17-e387-n1-c0.5",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 0.5
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.21,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:20",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.37311385451361245,
+   "train_seconds": 1.21,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 1.0
+   },
+   "run_id": "tuned-20261125-112012-18-e387-n1-c1.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-18-e387-n1-c1.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-18-e387-n1-c1.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 1.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.32,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:23",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.35499605450250277,
+   "train_seconds": 1.32,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 5.0
+   },
+   "run_id": "tuned-20261125-112012-19-e387-n1-c5.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-19-e387-n1-c5.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-19-e387-n1-c5.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 5.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.25,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:27",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.31404994424836113,
+   "train_seconds": 1.25,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 1,
+    "max_features": 20000,
+    "C": 10.0
+   },
+   "run_id": "tuned-20261125-112012-20-e387-n1-c10.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-20-e387-n1-c10.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-20-e387-n1-c10.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 1,
+     "C": 10.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.25,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:30",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.30454307979502726,
+   "train_seconds": 1.25,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 0.1
+   },
+   "run_id": "tuned-20261125-112012-21-e387-n2-c0.1",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-21-e387-n2-c0.1",
+   "engine": {
+    "run_id": "tuned-20261125-112012-21-e387-n2-c0.1",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 0.1
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.43,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:34",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.4086782609782687,
+   "train_seconds": 1.43,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 0.5
+   },
+   "run_id": "tuned-20261125-112012-22-e387-n2-c0.5",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-22-e387-n2-c0.5",
+   "engine": {
+    "run_id": "tuned-20261125-112012-22-e387-n2-c0.5",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 0.5
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.39,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:38",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.3450722411124314,
+   "train_seconds": 1.39,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 1.0
+   },
+   "run_id": "tuned-20261125-112012-23-e387-n2-c1.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-23-e387-n2-c1.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-23-e387-n2-c1.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 1.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.43,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:41",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.3200285923475863,
+   "train_seconds": 1.43,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 5.0
+   },
+   "run_id": "tuned-20261125-112012-24-e387-n2-c5.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-24-e387-n2-c5.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-24-e387-n2-c5.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 5.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.36,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:45",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.26450277210729983,
+   "train_seconds": 1.36,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 2,
+    "max_features": 20000,
+    "C": 10.0
+   },
+   "run_id": "tuned-20261125-112012-25-e387-n2-c10.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-25-e387-n2-c10.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-25-e387-n2-c10.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 2,
+     "C": 10.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 1.41,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:49",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.24437819683407036,
+   "train_seconds": 1.41,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 0.1
+   },
+   "run_id": "tuned-20261125-112012-26-e387-n3-c0.1",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-26-e387-n3-c0.1",
+   "engine": {
+    "run_id": "tuned-20261125-112012-26-e387-n3-c0.1",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 0.1
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.06,
+    "peak_rss_mb": 15,
+    "created": "2026-11-25 11:21:53",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.4098322323164243,
+   "train_seconds": 2.06,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 0.5
+   },
+   "run_id": "tuned-20261125-112012-27-e387-n3-c0.5",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-27-e387-n3-c0.5",
+   "engine": {
+    "run_id": "tuned-20261125-112012-27-e387-n3-c0.5",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 0.5
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.4,
+    "peak_rss_mb": 183,
+    "created": "2026-11-25 11:21:58",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.34173774227542075,
+   "train_seconds": 2.4,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 1.0
+   },
+   "run_id": "tuned-20261125-112012-28-e387-n3-c1.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-28-e387-n3-c1.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-28-e387-n3-c1.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 1.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 2.72,
+    "peak_rss_mb": 184,
+    "created": "2026-11-25 11:22:03",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.3139737530746704,
+   "train_seconds": 2.72,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 5.0
+   },
+   "run_id": "tuned-20261125-112012-29-e387-n3-c5.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-29-e387-n3-c5.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-29-e387-n3-c5.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 5.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 3.1,
+    "peak_rss_mb": 183,
+    "created": "2026-11-25 11:22:08",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.2578886094798998,
+   "train_seconds": 3.1,
+   "test": null
+  },
+  {
+   "config": {
+    "entry": 387,
+    "ngram": 3,
+    "max_features": 20000,
+    "C": 10.0
+   },
+   "run_id": "tuned-20261125-112012-30-e387-n3-c10.0",
+   "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-30-e387-n3-c10.0",
+   "engine": {
+    "run_id": "tuned-20261125-112012-30-e387-n3-c10.0",
+    "entry": 387,
+    "name": "TF-IDF + LogisticRegression",
+    "task": "text_classification",
+    "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+    "dataset_hash": "78df6be7d97fe2d9",
+    "primary": {
+     "name": "f1_macro",
+     "value": 1.0,
+     "higher_better": true
+    },
+    "val": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "test": {
+     "accuracy": 1.0,
+     "balanced_accuracy": 1.0,
+     "precision_macro": 1.0,
+     "recall_macro": 1.0,
+     "f1_macro": 1.0,
+     "rare_class": "0",
+     "rare_class_recall": 1.0,
+     "rare_class_precision": 1.0,
+     "roc_auc": 1.0,
+     "pr_auc": 1.0
+    },
+    "cv": null,
+    "params": {
+     "max_features": 20000,
+     "ngram": 3,
+     "C": 10.0
+    },
+    "tuned": null,
+    "device": "cpu",
+    "threads": 4,
+    "batch_size": 0,
+    "train_seconds": 3.52,
+    "peak_rss_mb": 184,
+    "created": "2026-11-25 11:22:14",
+    "libraries": {
+     "numpy": "2.5.4",
+     "pandas": "3.1.1",
+     "scipy": "1.18.1",
+     "scikit-learn": "1.9.1",
+     "joblib": "1.6.0",
+     "psutil": "7.2.2",
+     "fastapi": "0.165.0",
+     "uvicorn": "0.54.0"
+    },
+    "warnings": null
+   },
+   "val": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_spam": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      0,
+      120
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 120
+     }
+    }
+   },
+   "default_val": {
+    "accuracy": 0.9833333333333333,
+    "balanced_accuracy": 0.9833333333333334,
+    "precision_macro": 0.9838709677419355,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833287024173382,
+    "f1_spam": 0.9830508474576272,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+     [
+      120,
+      0
+     ],
+     [
+      4,
+      116
+     ]
+    ],
+    "per_class": {
+     "legitimate": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1": 0.9836065573770492,
+      "support": 120
+     },
+     "spam": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "support": 120
+     }
+    }
+   },
+   "threshold": 0.23722066390140442,
+   "train_seconds": 3.52,
+   "test": null
+  }
+ ],
+ "test_predictions": "model/predicted_test.csv"
+}

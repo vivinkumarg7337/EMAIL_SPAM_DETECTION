@@ -1,0 +1,26 @@
+{
+ "run_id": "tuned-20261125-112012-16-e387-n1-c0.1",
+ "run_dir": "/home/vivin-kumar/spam-detector/runs/tuned-20261125-112012-16-e387-n1-c0.1",
+ "entry": 387,
+ "name": "TF-IDF + LogisticRegression",
+ "task": "text_classification",
+ "dataset": {
+  "path": "/home/vivin-kumar/spam-detector/data/train.csv",
+  "target": "label",
+  "time_column": null,
+  "text_column": "text"
+ },
+ "params": {
+  "max_features": 20000,
+  "ngram": 1,
+  "C": 0.1
+ },
+ "split": {
+  "val": 0.15,
+  "test": 0.15,
+  "seed": 42
+ },
+ "device": "cpu",
+ "threads": 4,
+ "batch_size": 0
+}

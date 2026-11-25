@@ -1,0 +1,61 @@
+{
+ "run_id": "tuned-20261125-112012-16-e387-n1-c0.1",
+ "entry": 387,
+ "name": "TF-IDF + LogisticRegression",
+ "task": "text_classification",
+ "dataset": "/home/vivin-kumar/spam-detector/data/train.csv",
+ "dataset_hash": "78df6be7d97fe2d9",
+ "primary": {
+  "name": "f1_macro",
+  "value": 1.0,
+  "higher_better": true
+ },
+ "val": {
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "rare_class": "0",
+  "rare_class_recall": 1.0,
+  "rare_class_precision": 1.0,
+  "roc_auc": 1.0,
+  "pr_auc": 1.0
+ },
+ "test": {
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "rare_class": "0",
+  "rare_class_recall": 1.0,
+  "rare_class_precision": 1.0,
+  "roc_auc": 1.0,
+  "pr_auc": 1.0
+ },
+ "cv": null,
+ "params": {
+  "max_features": 20000,
+  "ngram": 1,
+  "C": 0.1
+ },
+ "tuned": null,
+ "device": "cpu",
+ "threads": 4,
+ "batch_size": 0,
+ "train_seconds": 1.63,
+ "peak_rss_mb": 15,
+ "created": "2026-11-25 11:21:16",
+ "libraries": {
+  "numpy": "2.5.4",
+  "pandas": "3.1.1",
+  "scipy": "1.18.1",
+  "scikit-learn": "1.9.1",
+  "joblib": "1.6.0",
+  "psutil": "7.2.2",
+  "fastapi": "0.165.0",
+  "uvicorn": "0.54.0"
+ },
+ "warnings": null
+}
